@@ -182,6 +182,7 @@
       transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--red); }
+    .nav-active { color: var(--red) !important; }
     .nav-cta {
       background: var(--red);
       color: var(--white);
@@ -1081,14 +1082,15 @@
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">Endeavor <span>Evolution</span></a>
       <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#founder">About</a></li>
-        <li><a href="#process">Process</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" class="nav-active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="funding.html">Funding</a></li>
+        <li><a href="credit.html">Credit</a></li>
+        <li><a href="consulting.html">Consulting</a></li>
+        <li><a href="webdesign.html">Web Design</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-      <a href="#contact" class="nav-cta mag-btn">Apply Now</a>
+      <a href="contact.html" class="nav-cta mag-btn">Apply Now</a>
       <button class="nav-hamburger" id="navToggle" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -1097,13 +1099,14 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#hero" onclick="closeMobile()">Home</a>
-    <a href="#services" onclick="closeMobile()">Services</a>
-    <a href="#founder" onclick="closeMobile()">About</a>
-    <a href="#process" onclick="closeMobile()">Process</a>
-    <a href="#faq" onclick="closeMobile()">FAQ</a>
-    <a href="#contact" onclick="closeMobile()">Contact</a>
-    <a href="#contact" class="btn-primary" onclick="closeMobile()">Apply Now</a>
+    <a href="index.html" onclick="closeMobile()">Home</a>
+    <a href="about.html" onclick="closeMobile()">About</a>
+    <a href="funding.html" onclick="closeMobile()">Funding</a>
+    <a href="credit.html" onclick="closeMobile()">Credit Repair</a>
+    <a href="consulting.html" onclick="closeMobile()">Consulting</a>
+    <a href="webdesign.html" onclick="closeMobile()">Web Design</a>
+    <a href="contact.html" onclick="closeMobile()">Contact</a>
+    <a href="contact.html" class="btn-primary" onclick="closeMobile()">Apply Now</a>
   </div>
 
   <!-- ═══ HERO ══════════════════════════════════════ -->
@@ -1544,12 +1547,13 @@
         <div>
           <div class="footer-col-title">Quick Links</div>
           <ul class="footer-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#services">Business Funding</a></li>
-            <li><a href="#services">Credit Repair</a></li>
-            <li><a href="#services">Consulting</a></li>
-            <li><a href="#services">Web Design</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="funding.html">Business Funding</a></li>
+            <li><a href="credit.html">Credit Repair</a></li>
+            <li><a href="consulting.html">Consulting</a></li>
+            <li><a href="webdesign.html">Web Design</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
@@ -1581,7 +1585,7 @@
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js"></script>
   <!-- Lenis -->
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
@@ -1629,45 +1633,63 @@
     });
     function closeMobile() { mobileMenu.classList.remove('open'); }
 
-    /* ── HERO SPLITTEXT ANIMATION ──────────────────── */
-    gsap.registerPlugin(ScrollTrigger, SplitText);
-    window.addEventListener('load', () => {
-      const line1 = new SplitText('#heroLine1', { type: 'chars' });
-      const line2 = new SplitText('#heroLine2', { type: 'chars' });
-      const tl = gsap.timeline({ delay: 0.3 });
-      tl.from(line1.chars, {
-        opacity: 0, y: 40, rotateX: -40,
-        stagger: 0.04, duration: 0.7, ease: 'back.out(1.5)'
-      })
-      .from(line2.chars, {
-        opacity: 0, y: 40, rotateX: -40,
-        stagger: 0.04, duration: 0.7, ease: 'back.out(1.5)'
-      }, '-=0.4');
+    /* ── GSAP REGISTER ─────────────────────────────── */
+    if (typeof SplitText !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger, SplitText);
+    } else {
+      gsap.registerPlugin(ScrollTrigger);
+    }
 
-      /* Hero stat cards float in */
-      const statCards = document.querySelectorAll('.hero-stat-card');
-      statCards.forEach((card, i) => {
-        gsap.to(card, {
-          opacity: 1, x: 0, duration: 0.7,
-          delay: 0.6 + i * 0.18, ease: 'power3.out'
-        });
-      });
+    /* ── HERO ANIMATIONS ───────────────────────────── */
+    /* Always run — don't gate on SplitText */
+    gsap.set(['.hero-eyebrow', '.hero-sub', '.hero-ctas'], { opacity: 0, y: 24 });
+
+    const heroTl = gsap.timeline({ delay: 0.2 });
+
+    if (typeof SplitText !== 'undefined') {
+      try {
+        const line1 = new SplitText('#heroLine1', { type: 'chars' });
+        const line2 = new SplitText('#heroLine2', { type: 'chars' });
+        heroTl
+          .from(line1.chars, { opacity: 0, y: 40, rotateX: -40, stagger: 0.04, duration: 0.7, ease: 'back.out(1.5)' })
+          .from(line2.chars, { opacity: 0, y: 40, rotateX: -40, stagger: 0.04, duration: 0.7, ease: 'back.out(1.5)' }, '-=0.4')
+          .to('.hero-eyebrow', { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, '-=0.3')
+          .to('.hero-sub',     { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, '-=0.35')
+          .to('.hero-ctas',    { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, '-=0.3');
+      } catch(e) {
+        gsap.to(['.hero-eyebrow','.hero-sub','.hero-ctas'], { opacity: 1, y: 0, duration: 0.7, stagger: 0.12, ease: 'power3.out' });
+      }
+    } else {
+      heroTl
+        .to('.hero-eyebrow', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' })
+        .to('.hero-sub',     { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.35')
+        .to('.hero-ctas',    { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.3');
+    }
+
+    /* Hero stat cards float in */
+    const statCards = document.querySelectorAll('.hero-stat-card');
+    statCards.forEach((card, i) => {
+      gsap.to(card, { opacity: 1, x: 0, duration: 0.7, delay: 0.6 + i * 0.18, ease: 'power3.out' });
     });
 
     /* ── SCROLL REVEAL (GSAP + ScrollTrigger) ──────── */
+    /* Skip hero children — they're animated above */
     const reveals = document.querySelectorAll('.reveal');
     reveals.forEach(el => {
-      gsap.fromTo(el,
-        { opacity: 0, y: 36 },
-        {
-          opacity: 1, y: 0, duration: 0.75, ease: 'power3.out',
-          scrollTrigger: {
-            trigger: el,
-            start: 'top 88%',
-            toggleActions: 'play none none none'
+      /* If element is already in viewport on load, animate immediately */
+      const rect = el.getBoundingClientRect();
+      const inView = rect.top < window.innerHeight * 0.95;
+      if (inView) {
+        gsap.fromTo(el, { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.75, ease: 'power3.out', delay: 0.1 });
+      } else {
+        gsap.fromTo(el,
+          { opacity: 0, y: 36 },
+          {
+            opacity: 1, y: 0, duration: 0.75, ease: 'power3.out',
+            scrollTrigger: { trigger: el, start: 'top 88%', once: true }
           }
-        }
-      );
+        );
+      }
     });
 
     /* ── COUNTER ANIMATION (IntersectionObserver) ──── */

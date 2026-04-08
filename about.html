@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Witson Locean | Endeavor Evolution Enterprises — Miami Gardens, FL</title>
+  <meta name="description" content="Meet Witson Locean, Chief Connection Officer and founder of Endeavor Evolution Enterprises. 5+ years connecting South Florida entrepreneurs to funding, credit repair, and growth resources." />
+  <link rel="canonical" href="https://endeavorevolution.com/about.html" />
+  <meta property="og:title" content="About Endeavor Evolution Enterprises" />
+  <meta property="og:description" content="Built on connection, driven by purpose. Learn the story behind Endeavor Evolution and founder Witson Locean." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red: #E8001D; --charcoal: #1A1A1A; --white: #FFFFFF;
+      --grey: #F8F9FA; --grey-mid: #E5E7EB; --text-muted: #6B7280;
+      --font-head: 'Cormorant Garamond', serif; --font-body: 'Inter', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--charcoal); background: var(--white); overflow-x: hidden; }
+
+    /* NAV */
+    #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--white); transition: box-shadow 0.3s; border-bottom: 1px solid transparent; }
+    #nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.08); border-bottom-color: var(--grey-mid); }
+    .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 2rem; height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .nav-logo { font-family: var(--font-head); font-size: 1.25rem; font-weight: 700; letter-spacing: 0.08em; color: var(--charcoal); text-decoration: none; text-transform: uppercase; white-space: nowrap; }
+    .nav-logo span { color: var(--red); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; color: var(--charcoal); transition: color 0.2s; }
+    .nav-links a:hover, .nav-active { color: var(--red) !important; }
+    .nav-cta { background: var(--red); color: var(--white); padding: 0.65rem 1.6rem; border-radius: 4px; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none; white-space: nowrap; transition: background 0.2s; }
+    .nav-cta:hover { background: #c40018; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--charcoal); }
+    .mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; background: var(--white); border-top: 1px solid var(--grey-mid); padding: 1.5rem 2rem; box-shadow: 0 8px 32px rgba(0,0,0,0.1); z-index: 999; flex-direction: column; gap: 1.25rem; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-size: 0.9rem; font-weight: 500; color: var(--charcoal); text-decoration: none; padding: 0.4rem 0; border-bottom: 1px solid var(--grey-mid); }
+    .mobile-menu a:last-child { border-bottom: none; }
+
+    /* PAGE HERO */
+    .page-hero { background: var(--white); padding: 9rem 2rem 5rem; border-bottom: 1px solid var(--grey-mid); position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--red); }
+    .page-hero::after { content: ''; position: absolute; top: 72px; right: 0; width: 45%; height: 100%; background: var(--grey); clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%); z-index: 0; }
+    .page-hero-inner { max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; }
+    .page-hero-breadcrumb { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
+    .page-hero-breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .page-hero-breadcrumb a:hover { color: var(--red); }
+    .page-hero h1 { font-family: var(--font-head); font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; line-height: 1.1; color: var(--charcoal); max-width: 680px; }
+    .page-hero h1 span { color: var(--red); }
+    .page-hero-sub { font-size: 1.05rem; line-height: 1.75; color: var(--text-muted); max-width: 560px; margin-top: 1.25rem; }
+
+    /* SECTIONS */
+    .section-inner { max-width: 1280px; margin: 0 auto; padding: 6rem 2rem; }
+    .section-eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
+    .section-headline { font-family: var(--font-head); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; line-height: 1.15; color: var(--charcoal); margin-bottom: 1rem; }
+    .section-sub { font-size: 1rem; line-height: 1.75; color: var(--text-muted); max-width: 600px; }
+    .reveal { opacity: 0; transform: translateY(28px); }
+
+    /* FOUNDER STORY */
+    .founder-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start; }
+    .founder-photo { width: 100%; aspect-ratio: 4/5; border-radius: 12px; background: linear-gradient(135deg, #f0f0f0, #e0e0e0); display: flex; align-items: center; justify-content: center; border: 1px solid var(--grey-mid); position: sticky; top: 100px; overflow: hidden; }
+    .founder-initials { font-family: var(--font-head); font-size: 6rem; font-weight: 700; color: rgba(26,26,26,0.12); }
+    .founder-badge { position: absolute; bottom: -1rem; right: -1rem; background: var(--red); color: var(--white); border-radius: 8px; padding: 1rem 1.5rem; font-family: var(--font-head); font-size: 1rem; font-weight: 700; text-align: center; box-shadow: 0 8px 24px rgba(232,0,29,0.3); }
+    .founder-badge span { display: block; font-family: var(--font-body); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85; margin-top: 0.2rem; }
+    .founder-photo-wrap { position: relative; }
+    .bio-block { margin-bottom: 1.5rem; font-size: 0.97rem; line-height: 1.85; color: #374151; }
+    .quote-block { padding: 2rem; background: var(--grey); border-left: 4px solid var(--red); border-radius: 0 8px 8px 0; margin: 2.5rem 0; }
+    .quote-text { font-family: var(--font-head); font-size: 1.4rem; font-weight: 600; line-height: 1.5; color: var(--charcoal); font-style: italic; }
+    .quote-attr { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); margin-top: 0.75rem; }
+
+    /* MISSION / VALUES */
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .value-card { background: var(--white); border: 1px solid var(--grey-mid); border-radius: 10px; padding: 2rem; text-align: center; }
+    .value-num { font-family: var(--font-head); font-size: 3rem; font-weight: 700; color: rgba(232,0,29,0.1); line-height: 1; margin-bottom: 0.5rem; }
+    .value-title { font-family: var(--font-head); font-size: 1.3rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.5rem; }
+    .value-desc { font-size: 0.88rem; line-height: 1.7; color: var(--text-muted); }
+
+    /* STATS */
+    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--grey-mid); border: 1px solid var(--grey-mid); border-radius: 12px; overflow: hidden; }
+    .stat-cell { background: var(--white); padding: 2.5rem 1.5rem; text-align: center; }
+    .stat-num { font-family: var(--font-head); font-size: 2.8rem; font-weight: 700; color: var(--red); line-height: 1; }
+    .stat-label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.5rem; }
+
+    /* CTA */
+    .cta-band { background: var(--red); padding: 5rem 2rem; text-align: center; }
+    .cta-band h2 { font-family: var(--font-head); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; color: var(--white); margin-bottom: 1rem; }
+    .cta-band p { font-size: 1rem; color: rgba(255,255,255,0.85); max-width: 520px; margin: 0 auto 2.25rem; line-height: 1.75; }
+    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-white { background: var(--white); color: var(--red); padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; border: 2px solid var(--white); transition: background 0.2s; display: inline-block; }
+    .btn-white:hover { background: #f0f0f0; }
+    .btn-outline-white { background: transparent; color: var(--white); padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; border: 2px solid rgba(255,255,255,0.7); transition: background 0.2s; display: inline-block; }
+    .btn-outline-white:hover { background: rgba(255,255,255,0.12); }
+
+    /* FOOTER */
+    #footer { background: var(--charcoal); color: var(--white); padding: 4rem 2rem 0; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-logo { font-family: var(--font-head); font-size: 1.35rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--white); margin-bottom: 0.75rem; }
+    .footer-logo span { color: var(--red); }
+    .footer-tagline { font-size: 0.85rem; color: rgba(255,255,255,0.5); font-style: italic; margin-bottom: 1.5rem; line-height: 1.6; }
+    .footer-contact-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; text-decoration: none; transition: color 0.2s; }
+    .footer-contact-item:hover { color: var(--white); }
+    .footer-contact-item svg { width: 14px; height: 14px; color: var(--red); flex-shrink: 0; }
+    .footer-col-title { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1.25rem; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-links a { font-size: 0.88rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-bottom-bar { height: 3px; background: var(--red); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; flex-wrap: wrap; gap: 1rem; }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+    .footer-copy a { color: rgba(255,255,255,0.5); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+      .founder-grid { grid-template-columns: 1fr; }
+      .founder-photo { position: static; max-width: 360px; }
+      .values-grid { grid-template-columns: 1fr; }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .page-hero::after { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Endeavor <span>Evolution</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="nav-active">About</a></li>
+        <li><a href="funding.html">Funding</a></li>
+        <li><a href="credit.html">Credit</a></li>
+        <li><a href="consulting.html">Consulting</a></li>
+        <li><a href="webdesign.html">Web Design</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Apply Now</a>
+      <button class="nav-hamburger" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="funding.html">Funding</a>
+    <a href="credit.html">Credit Repair</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="webdesign.html">Web Design</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" style="color:var(--red);font-weight:600;">Apply Now →</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-breadcrumb"><a href="index.html">Home</a> &rsaquo; About</div>
+      <h1>One Core Belief<br/><span>Changed Everything.</span></h1>
+      <p class="page-hero-sub">The story behind Endeavor Evolution Enterprises and the man who built it — Witson Locean, Chief Connection Officer.</p>
+    </div>
+  </header>
+
+  <!-- FOUNDER STORY -->
+  <section style="background:var(--white);">
+    <div class="section-inner">
+      <div class="founder-grid">
+        <div class="founder-photo-wrap reveal">
+          <div class="founder-photo">
+            <div class="founder-initials">WL</div>
+          </div>
+          <div class="founder-badge">
+            Chief Connection Officer
+            <span>Witson Locean</span>
+          </div>
+        </div>
+        <div>
+          <div class="section-eyebrow reveal">Meet The Founder</div>
+          <h2 class="section-headline reveal">Built On Connection.<br/>Driven By Purpose.</h2>
+          <p class="bio-block reveal">Witson Locean didn't start Endeavor Evolution Enterprises because he saw a market opportunity. He started it because he lived the problem firsthand — watching talented, driven entrepreneurs fail not because they lacked vision, but because they lacked access.</p>
+          <p class="bio-block reveal">Access to capital. Access to the right people. Access to the knowledge that could have changed everything. Witson built this company to be that access — a bridge that connects individuals, entrepreneurs, and small business owners to the people, resources, and services they need to grow.</p>
+          <p class="bio-block reveal">Over the past 5+ years, Witson has worked directly with more than 500 clients across South Florida — from startups trying to get their first line of credit to established small businesses seeking six-figure capital injections. His approach is always the same: personal, direct, and relentlessly focused on results.</p>
+          <div class="quote-block reveal">
+            <p class="quote-text">"My mission has always been simple — to create pathways that allow people to move forward."</p>
+            <div class="quote-attr">— Witson Locean, Chief Connection Officer</div>
+          </div>
+          <p class="bio-block reveal">As the founder of Endeavor Evolution and its sister brand Visionary Web Studio, Witson brings a complete ecosystem of services under one roof — ensuring that every client who walks through the door has access to everything they need to build something lasting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section style="background:var(--grey);">
+    <div class="section-inner" style="padding-top:4rem;padding-bottom:4rem;">
+      <div class="stats-row reveal">
+        <div class="stat-cell"><div class="stat-num">$3.8M+</div><div class="stat-label">Capital Secured</div></div>
+        <div class="stat-cell"><div class="stat-num">500+</div><div class="stat-label">Clients Served</div></div>
+        <div class="stat-cell"><div class="stat-num">5+</div><div class="stat-label">Years Experience</div></div>
+        <div class="stat-cell"><div class="stat-num">15+</div><div class="stat-label">Funding Partners</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VALUES -->
+  <section style="background:var(--white);">
+    <div class="section-inner">
+      <div class="section-eyebrow reveal">Our Foundation</div>
+      <h2 class="section-headline reveal">Three Principles We Never Compromise</h2>
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <div class="value-num">01</div>
+          <div class="value-title">Connection First</div>
+          <p class="value-desc">Every service we offer is grounded in genuine relationship. We don't automate clients — we connect with them. Your success is personal to us.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-num">02</div>
+          <div class="value-title">Purpose Driven</div>
+          <p class="value-desc">We measure success by the number of businesses we help grow, not just the revenue we generate. Purpose directs everything we do.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-num">03</div>
+          <div class="value-title">End-to-End Commitment</div>
+          <p class="value-desc">We stay with you from the first consultation to the moment you reach your goal. No handoffs. No disappearing acts. We finish what we start.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-band">
+    <h2>Ready To Work With Witson?</h2>
+    <p>Book your free consultation today and discover exactly how Endeavor Evolution can create a pathway forward for your business.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn-white">Book Free Consultation</a>
+      <a href="funding.html" class="btn-outline-white">Explore Our Services</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">Endeavor <span>Evolution</span></div>
+          <div class="footer-tagline">"Built On Connection. Driven By Purpose."<br/>Miami Gardens, FL — Serving All of South Florida</div>
+          <a href="tel:+13050000000" class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(305) 000-0000</a>
+          <a href="mailto:info@endeavorevolution.com" class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@endeavorevolution.com</a>
+        </div>
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="funding.html">Business Funding</a></li>
+            <li><a href="credit.html">Credit Repair</a></li>
+            <li><a href="consulting.html">Consulting</a></li>
+            <li><a href="webdesign.html">Web Design</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Service Area</div>
+          <ul class="footer-links">
+            <li><a href="#">Miami Gardens, FL</a></li>
+            <li><a href="#">Miami, FL</a></li>
+            <li><a href="#">Fort Lauderdale, FL</a></li>
+            <li><a href="#">Miramar, FL</a></li>
+            <li><a href="#">All of South Florida</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar"></div>
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; 2024 Endeavor Evolution Enterprises LLC. All rights reserved.</div>
+        <div class="footer-copy">Web Design by <a href="webdesign.html">Visionary Web Studio</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    const lenis = new Lenis({ duration: 1.2, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(time => lenis.raf(time * 1000));
+    gsap.ticker.lagSmoothing(0);
+
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.95) {
+        gsap.fromTo(el, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', delay: 0.1 });
+      } else {
+        gsap.fromTo(el, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
+      }
+    });
+
+    document.querySelectorAll('a.nav-cta, .btn-white, .btn-outline-white').forEach(btn => {
+      btn.addEventListener('mousemove', e => {
+        const r = btn.getBoundingClientRect();
+        gsap.to(btn, { x: (e.clientX - r.left - r.width/2) * 0.25, y: (e.clientY - r.top - r.height/2) * 0.25, duration: 0.3, ease: 'power2.out' });
+      });
+      btn.addEventListener('mouseleave', () => gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1,0.5)' }));
+    });
+  </script>
+</body>
+</html>

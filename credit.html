@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credit Repair Miami Gardens | Endeavor Evolution Enterprises</title>
+  <meta name="description" content="Professional credit repair services in Miami Gardens, FL. Endeavor Evolution helps South Florida entrepreneurs rebuild credit scores in 60–90 days to unlock better financing opportunities." />
+  <link rel="canonical" href="https://endeavorevolution.com/credit.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --red: #E8001D; --charcoal: #1A1A1A; --white: #FFFFFF; --grey: #F8F9FA; --grey-mid: #E5E7EB; --text-muted: #6B7280; --font-head: 'Cormorant Garamond', serif; --font-body: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--charcoal); background: var(--white); overflow-x: hidden; }
+    #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--white); transition: box-shadow 0.3s; border-bottom: 1px solid transparent; }
+    #nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.08); border-bottom-color: var(--grey-mid); }
+    .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 2rem; height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .nav-logo { font-family: var(--font-head); font-size: 1.25rem; font-weight: 700; letter-spacing: 0.08em; color: var(--charcoal); text-decoration: none; text-transform: uppercase; }
+    .nav-logo span { color: var(--red); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; color: var(--charcoal); transition: color 0.2s; }
+    .nav-links a:hover, .nav-active { color: var(--red) !important; }
+    .nav-cta { background: var(--red); color: var(--white); padding: 0.65rem 1.6rem; border-radius: 4px; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+    .nav-cta:hover { background: #c40018; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--charcoal); }
+    .mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; background: var(--white); border-top: 1px solid var(--grey-mid); padding: 1.5rem 2rem; box-shadow: 0 8px 32px rgba(0,0,0,0.1); z-index: 999; flex-direction: column; gap: 1.25rem; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-size: 0.9rem; font-weight: 500; color: var(--charcoal); text-decoration: none; padding: 0.4rem 0; border-bottom: 1px solid var(--grey-mid); }
+
+    .page-hero { background: var(--white); padding: 9rem 2rem 5rem; border-bottom: 1px solid var(--grey-mid); position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--red); }
+    .page-hero::after { content: ''; position: absolute; top: 72px; right: 0; width: 45%; height: 100%; background: var(--grey); clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%); z-index: 0; }
+    .page-hero-inner { max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; }
+    .page-hero-breadcrumb { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
+    .page-hero-breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .page-hero h1 { font-family: var(--font-head); font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; line-height: 1.1; color: var(--charcoal); max-width: 700px; }
+    .page-hero h1 span { color: var(--red); }
+    .page-hero-sub { font-size: 1.05rem; line-height: 1.75; color: var(--text-muted); max-width: 560px; margin-top: 1.25rem; }
+    .page-hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+    .btn-primary { background: var(--red); color: var(--white); padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; border: 2px solid var(--red); display: inline-block; transition: background 0.2s; }
+    .btn-outline { background: transparent; color: var(--charcoal); padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; border: 2px solid var(--charcoal); display: inline-block; transition: border-color 0.2s, color 0.2s; }
+    .btn-outline:hover { border-color: var(--red); color: var(--red); }
+    .section-inner { max-width: 1280px; margin: 0 auto; padding: 6rem 2rem; }
+    .section-eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
+    .section-headline { font-family: var(--font-head); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; line-height: 1.15; color: var(--charcoal); margin-bottom: 1rem; }
+    .section-sub { font-size: 1rem; line-height: 1.75; color: var(--text-muted); max-width: 580px; }
+    .reveal { opacity: 0; transform: translateY(28px); }
+
+    /* WHAT WE ADDRESS */
+    .address-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 3rem; }
+    .address-card { background: var(--grey); border-radius: 10px; padding: 1.75rem; border: 1px solid var(--grey-mid); }
+    .address-icon { width: 44px; height: 44px; background: rgba(232,0,29,0.08); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+    .address-icon svg { width: 20px; height: 20px; color: var(--red); }
+    .address-title { font-family: var(--font-head); font-size: 1.2rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.4rem; }
+    .address-desc { font-size: 0.85rem; line-height: 1.65; color: var(--text-muted); }
+
+    /* PROCESS TIMELINE */
+    .timeline { max-width: 720px; margin: 3rem auto 0; position: relative; }
+    .timeline::before { content: ''; position: absolute; left: 28px; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, var(--red), rgba(232,0,29,0.1)); }
+    .timeline-item { display: flex; gap: 2rem; margin-bottom: 2.5rem; position: relative; }
+    .timeline-dot { width: 58px; height: 58px; border-radius: 50%; background: var(--white); border: 2px solid var(--red); display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; z-index: 1; }
+    .timeline-dot-num { font-family: var(--font-head); font-size: 1.3rem; font-weight: 700; color: var(--red); }
+    .timeline-content { padding-top: 0.75rem; }
+    .timeline-phase { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); margin-bottom: 0.3rem; }
+    .timeline-title { font-family: var(--font-head); font-size: 1.3rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.4rem; }
+    .timeline-desc { font-size: 0.88rem; line-height: 1.7; color: var(--text-muted); }
+
+    /* RESULTS */
+    .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--grey-mid); border: 1px solid var(--grey-mid); border-radius: 12px; overflow: hidden; }
+    .result-cell { background: var(--white); padding: 2.5rem; text-align: center; }
+    .result-num { font-family: var(--font-head); font-size: 3rem; font-weight: 700; color: var(--red); line-height: 1; }
+    .result-label { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.5rem; }
+
+    /* CREDIT SCORE VISUAL */
+    .score-visual { background: var(--white); border: 1px solid var(--grey-mid); border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
+    .score-bar-wrap { display: flex; flex-direction: column; gap: 0.4rem; }
+    .score-bar-label { display: flex; justify-content: space-between; font-size: 0.82rem; }
+    .score-bar-label span:first-child { font-weight: 600; color: var(--charcoal); }
+    .score-bar-label span:last-child { font-weight: 700; color: var(--red); }
+    .score-bar-track { height: 8px; background: var(--grey); border-radius: 100px; overflow: hidden; }
+    .score-bar-fill { height: 100%; background: var(--red); border-radius: 100px; transition: width 1s ease; }
+    .score-note { font-size: 0.8rem; color: var(--text-muted); text-align: center; padding-top: 0.5rem; border-top: 1px solid var(--grey-mid); }
+
+    /* FAQ */
+    .faq-list { max-width: 760px; margin: 2.5rem auto 0; }
+    .faq-item { border-bottom: 1px solid var(--grey-mid); }
+    .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 1.4rem 0; display: flex; justify-content: space-between; align-items: center; gap: 1rem; cursor: pointer; font-family: var(--font-head); font-size: 1.1rem; font-weight: 600; color: var(--charcoal); }
+    .faq-icon { width: 26px; height: 26px; border: 1px solid var(--grey-mid); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s; }
+    .faq-icon svg { width: 11px; height: 11px; transition: transform 0.3s; }
+    .faq-item.open .faq-icon { background: var(--red); border-color: var(--red); }
+    .faq-item.open .faq-icon svg { transform: rotate(45deg); color: var(--white); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .faq-item.open .faq-a { max-height: 300px; }
+    .faq-a-inner { padding-bottom: 1.4rem; font-size: 0.92rem; line-height: 1.8; color: var(--text-muted); }
+
+    .cta-band { background: var(--red); padding: 5rem 2rem; text-align: center; }
+    .cta-band h2 { font-family: var(--font-head); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; color: var(--white); margin-bottom: 1rem; }
+    .cta-band p { font-size: 1rem; color: rgba(255,255,255,0.85); max-width: 520px; margin: 0 auto 2.25rem; line-height: 1.75; }
+    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-white { background: var(--white); color: var(--red); padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; border: 2px solid var(--white); display: inline-block; }
+    .btn-outline-white { background: transparent; color: var(--white); padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.88rem; font-weight: 600; text-transform: uppercase; text-decoration: none; border: 2px solid rgba(255,255,255,0.7); display: inline-block; }
+
+    #footer { background: var(--charcoal); color: var(--white); padding: 4rem 2rem 0; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-logo { font-family: var(--font-head); font-size: 1.35rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--white); margin-bottom: 0.75rem; }
+    .footer-logo span { color: var(--red); }
+    .footer-tagline { font-size: 0.85rem; color: rgba(255,255,255,0.5); font-style: italic; margin-bottom: 1.25rem; }
+    .footer-contact { display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; text-decoration: none; }
+    .footer-contact svg { width: 14px; height: 14px; color: var(--red); }
+    .footer-col-title { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1.25rem; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-links a { font-size: 0.88rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-bottom-bar { height: 3px; background: var(--red); }
+    .footer-bottom { display: flex; justify-content: space-between; padding: 1.5rem 0; flex-wrap: wrap; gap: 1rem; }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+    .footer-copy a { color: rgba(255,255,255,0.5); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+      .address-grid { grid-template-columns: 1fr; }
+      .results-grid { grid-template-columns: 1fr; gap: 0; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .page-hero::after { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Endeavor <span>Evolution</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li><a href="funding.html">Funding</a></li>
+        <li><a href="credit.html" class="nav-active">Credit</a></li>
+        <li><a href="consulting.html">Consulting</a></li>
+        <li><a href="webdesign.html">Web Design</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Apply Now</a>
+      <button class="nav-hamburger" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="funding.html">Funding</a>
+    <a href="credit.html">Credit Repair</a><a href="consulting.html">Consulting</a>
+    <a href="webdesign.html">Web Design</a><a href="contact.html">Contact</a>
+    <a href="contact.html" style="color:var(--red);font-weight:600;">Apply Now →</a>
+  </div>
+
+  <header class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-breadcrumb"><a href="index.html">Home</a> &rsaquo; Credit Repair</div>
+      <h1>Rebuild Your Credit.<br/><span>Unlock Every Door.</span></h1>
+      <p class="page-hero-sub">Our proven credit repair methodology helps South Florida entrepreneurs remove negative items, dispute inaccuracies, and build a credit profile that opens doors to better financing — in 60–90 days.</p>
+      <div class="page-hero-ctas">
+        <a href="contact.html" class="btn-primary">Start Credit Repair</a>
+        <a href="contact.html" class="btn-outline">Free Credit Review</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- WHAT WE ADDRESS -->
+  <section style="background:var(--white);">
+    <div class="section-inner">
+      <div class="section-eyebrow reveal">Our Approach</div>
+      <h2 class="section-headline reveal">We Attack Every Angle Simultaneously</h2>
+      <p class="section-sub reveal">Most credit repair companies do one thing. We do all of them at the same time — which is why our clients see results faster.</p>
+      <div class="address-grid">
+        <div class="address-card reveal">
+          <div class="address-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 14l-4-4 4-4"/><path d="M5 10h11a4 4 0 0 1 0 8h-1"/></svg></div>
+          <div class="address-title">Dispute Errors</div>
+          <p class="address-desc">Up to 79% of credit reports contain errors. We identify and dispute inaccurate negative items directly with all three bureaus — Equifax, Experian, TransUnion.</p>
+        </div>
+        <div class="address-card reveal">
+          <div class="address-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div class="address-title">Remove Late Payments</div>
+          <p class="address-desc">We send goodwill letters and leverage consumer protection laws to request removal of late payments, charge-offs, and collections that may be hurting your score.</p>
+        </div>
+        <div class="address-card reveal">
+          <div class="address-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <div class="address-title">Reduce Inquiries</div>
+          <p class="address-desc">Excessive hard inquiries can drag your score down significantly. We challenge unauthorized or outdated inquiries and coach you on how to avoid more.</p>
+        </div>
+        <div class="address-card reveal">
+          <div class="address-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <div class="address-title">Build Positive History</div>
+          <p class="address-desc">We don't just remove the bad — we help you add the good. Secured cards, credit builder accounts, and authorized user strategies to build a positive payment history.</p>
+        </div>
+        <div class="address-card reveal">
+          <div class="address-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+          <div class="address-title">Optimize Utilization</div>
+          <p class="address-desc">Credit utilization accounts for 30% of your score. We advise on the optimal balance-to-limit ratio and strategies to improve it quickly without new credit.</p>
+        </div>
+        <div class="address-card reveal">
+          <div class="address-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <div class="address-title">Ongoing Monitoring</div>
+          <p class="address-desc">We monitor your reports throughout the process, alert you to new issues immediately, and adjust the strategy based on bureau responses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section style="background:var(--grey);">
+    <div class="section-inner" style="padding-top:4rem;padding-bottom:4rem;">
+      <div style="text-align:center;margin-bottom:2.5rem;">
+        <div class="section-eyebrow reveal">Typical Results</div>
+        <h2 class="section-headline reveal">What Our Clients Experience</h2>
+      </div>
+      <div class="results-grid reveal">
+        <div class="result-cell"><div class="result-num">60–90</div><div class="result-label">Days to See Results</div></div>
+        <div class="result-cell"><div class="result-num">80+</div><div class="result-label">Avg. Points Gained</div></div>
+        <div class="result-cell"><div class="result-num">98%</div><div class="result-label">Client Satisfaction</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS TIMELINE -->
+  <section style="background:var(--white);">
+    <div class="section-inner">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <div class="section-eyebrow reveal">Our Process</div>
+        <h2 class="section-headline reveal">Your Credit Repair Journey</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"><div class="timeline-dot-num">1</div></div>
+          <div class="timeline-content">
+            <div class="timeline-phase">Week 1</div>
+            <div class="timeline-title">Credit Audit & Strategy</div>
+            <p class="timeline-desc">We pull and analyze all three bureau reports, identify every negative item, and build a custom dispute and rebuild strategy specific to your profile.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"><div class="timeline-dot-num">2</div></div>
+          <div class="timeline-content">
+            <div class="timeline-phase">Weeks 2–4</div>
+            <div class="timeline-title">Dispute Filing & Positive Building</div>
+            <p class="timeline-desc">We send dispute letters to the bureaus and creditors. Simultaneously, we implement positive-building strategies to add new positive history to your reports.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"><div class="timeline-dot-num">3</div></div>
+          <div class="timeline-content">
+            <div class="timeline-phase">Days 30–45</div>
+            <div class="timeline-title">Bureau Responses & Round 2</div>
+            <p class="timeline-desc">Bureaus respond to disputes (legally required within 30 days). We review each response, celebrate removals, and file escalated disputes for any unresolved items.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"><div class="timeline-dot-num">4</div></div>
+          <div class="timeline-content">
+            <div class="timeline-phase">Days 60–90</div>
+            <div class="timeline-title">Score Improvement & Funding Readiness</div>
+            <p class="timeline-desc">Most clients see 60–100+ point increases by this stage. We assess your readiness for funding applications and connect you with our lending partners.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:var(--grey);">
+    <div class="section-inner">
+      <div style="text-align:center;"><div class="section-eyebrow reveal">Questions</div><h2 class="section-headline reveal">Credit Repair FAQ</h2></div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">Is credit repair legal?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-a"><p class="faq-a-inner">Yes. Everything we do is fully legal and grounded in consumer protection laws — specifically the Fair Credit Reporting Act (FCRA) and the Fair Debt Collection Practices Act (FDCPA). You have the legal right to dispute inaccurate or unverifiable items on your credit report.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Can you remove accurate negative items?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-a"><p class="faq-a-inner">In some cases, yes. Through goodwill letters, pay-for-delete negotiations, and statute of limitations challenges, accurate negative items can sometimes be removed. However, we set honest expectations — we can't guarantee removal of fully verified accurate items.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">How much does credit repair cost?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-a"><p class="faq-a-inner">Pricing depends on your specific situation. We offer a free credit review consultation to assess your profile and provide transparent pricing before you commit to anything. We never charge upfront fees before services are rendered.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Can I repair my credit and apply for funding at the same time?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-a"><p class="faq-a-inner">Yes — and we actually recommend it. We can pursue funding options available to you today based on your current profile, while simultaneously repairing your credit to unlock better options within 60–90 days. It's a strategy we've used successfully with hundreds of clients.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <h2>Ready To Rebuild?</h2>
+    <p>Get your free credit review and see exactly what's holding your score back — and what we can do about it starting this week.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn-white">Get Free Credit Review</a>
+      <a href="funding.html" class="btn-outline-white">Also Explore Funding</a>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">Endeavor <span>Evolution</span></div>
+          <div class="footer-tagline">"Built On Connection. Driven By Purpose." — Miami Gardens, FL</div>
+          <a href="tel:+13050000000" class="footer-contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(305) 000-0000</a>
+          <a href="mailto:info@endeavorevolution.com" class="footer-contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@endeavorevolution.com</a>
+        </div>
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+            <li><a href="funding.html">Business Funding</a></li><li><a href="credit.html">Credit Repair</a></li>
+            <li><a href="consulting.html">Consulting</a></li><li><a href="webdesign.html">Web Design</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Service Area</div>
+          <ul class="footer-links">
+            <li><a href="#">Miami Gardens, FL</a></li><li><a href="#">Miami, FL</a></li>
+            <li><a href="#">Fort Lauderdale, FL</a></li><li><a href="#">All of South Florida</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar"></div>
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; 2024 Endeavor Evolution Enterprises LLC. All rights reserved.</div>
+        <div class="footer-copy">Web Design by <a href="webdesign.html">Visionary Web Studio</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    const lenis = new Lenis({ duration: 1.2, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(time => lenis.raf(time * 1000));
+    gsap.ticker.lagSmoothing(0);
+    window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40));
+    document.getElementById('navToggle').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('open'));
+    document.querySelectorAll('.reveal').forEach(el => {
+      const inView = el.getBoundingClientRect().top < window.innerHeight * 0.95;
+      if (inView) gsap.fromTo(el, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', delay: 0.1 });
+      else gsap.fromTo(el, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
+    });
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item'), isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => { i.classList.remove('open'); });
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+</body>
+</html>

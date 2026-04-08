@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Apply For Funding — Endeavor Evolution Enterprises Miami Gardens</title>
+  <meta name="description" content="Book a free consultation with Endeavor Evolution Enterprises in Miami Gardens, FL. Apply for business funding, credit repair, or consulting. We respond within 24 hours." />
+  <link rel="canonical" href="https://endeavorevolution.com/contact.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --red: #E8001D; --charcoal: #1A1A1A; --white: #FFFFFF; --grey: #F8F9FA; --grey-mid: #E5E7EB; --text-muted: #6B7280; --font-head: 'Cormorant Garamond', serif; --font-body: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--charcoal); background: var(--white); overflow-x: hidden; }
+    #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--white); transition: box-shadow 0.3s; border-bottom: 1px solid transparent; }
+    #nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.08); border-bottom-color: var(--grey-mid); }
+    .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 2rem; height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .nav-logo { font-family: var(--font-head); font-size: 1.25rem; font-weight: 700; letter-spacing: 0.08em; color: var(--charcoal); text-decoration: none; text-transform: uppercase; }
+    .nav-logo span { color: var(--red); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; color: var(--charcoal); transition: color 0.2s; }
+    .nav-links a:hover, .nav-active { color: var(--red) !important; }
+    .nav-cta { background: var(--red); color: var(--white); padding: 0.65rem 1.6rem; border-radius: 4px; font-size: 0.82rem; font-weight: 600; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+    .nav-cta:hover { background: #c40018; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--charcoal); }
+    .mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; background: var(--white); border-top: 1px solid var(--grey-mid); padding: 1.5rem 2rem; box-shadow: 0 8px 32px rgba(0,0,0,0.1); z-index: 999; flex-direction: column; gap: 1.25rem; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-size: 0.9rem; color: var(--charcoal); text-decoration: none; padding: 0.4rem 0; border-bottom: 1px solid var(--grey-mid); }
+
+    .page-hero { background: var(--white); padding: 9rem 2rem 5rem; border-bottom: 1px solid var(--grey-mid); position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--red); }
+    .page-hero::after { content: ''; position: absolute; top: 72px; right: 0; width: 45%; height: 100%; background: var(--grey); clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%); z-index: 0; }
+    .page-hero-inner { max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; }
+    .page-hero-breadcrumb { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
+    .page-hero-breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .page-hero h1 { font-family: var(--font-head); font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; line-height: 1.1; color: var(--charcoal); max-width: 700px; }
+    .page-hero h1 span { color: var(--red); }
+    .page-hero-sub { font-size: 1.05rem; line-height: 1.75; color: var(--text-muted); max-width: 520px; margin-top: 1.25rem; }
+
+    .section-inner { max-width: 1280px; margin: 0 auto; padding: 6rem 2rem; }
+    .reveal { opacity: 0; transform: translateY(28px); }
+
+    /* CONTACT LAYOUT */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 5rem; align-items: start; }
+
+    /* LEFT SIDE INFO */
+    .contact-eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 0.75rem; }
+    .contact-headline { font-family: var(--font-head); font-size: 2.2rem; font-weight: 700; line-height: 1.2; color: var(--charcoal); margin-bottom: 1.25rem; }
+    .contact-body { font-size: 0.92rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 2rem; }
+    .contact-info-item { display: flex; align-items: flex-start; gap: 1rem; padding: 1.25rem; background: var(--grey); border-radius: 8px; margin-bottom: 0.75rem; }
+    .contact-info-icon { width: 40px; height: 40px; background: rgba(232,0,29,0.08); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .contact-info-icon svg { width: 18px; height: 18px; color: var(--red); }
+    .contact-info-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.25rem; }
+    .contact-info-value { font-size: 0.9rem; font-weight: 500; color: var(--charcoal); text-decoration: none; display: block; }
+    .contact-info-value:hover { color: var(--red); }
+
+    /* TRUST BADGES */
+    .trust-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.75rem; }
+    .trust-pill { display: flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.9rem; background: var(--white); border: 1px solid var(--grey-mid); border-radius: 100px; font-size: 0.75rem; font-weight: 600; color: var(--charcoal); }
+    .trust-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--red); }
+
+    /* FORM */
+    .contact-form-wrap { background: var(--white); border: 1px solid var(--grey-mid); border-radius: 16px; padding: 3rem; box-shadow: 0 8px 40px rgba(0,0,0,0.06); }
+    .form-title { font-family: var(--font-head); font-size: 1.75rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.5rem; }
+    .form-sub { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 2rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+    .form-field { margin-bottom: 1rem; }
+    .form-label { display: block; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--charcoal); margin-bottom: 0.45rem; }
+    .form-input { width: 100%; padding: 0.85rem 1rem; border: 1px solid var(--grey-mid); border-radius: 6px; font-family: var(--font-body); font-size: 0.92rem; color: var(--charcoal); background: var(--white); outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
+    .form-input:focus { border-color: var(--red); box-shadow: 0 0 0 3px rgba(232,0,29,0.08); }
+    .form-select { appearance: none; cursor: pointer; background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 16px; }
+    .form-textarea { resize: vertical; min-height: 120px; }
+    .form-submit { width: 100%; padding: 1rem; background: var(--red); color: var(--white); border: none; border-radius: 6px; font-family: var(--font-body); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; margin-top: 0.5rem; }
+    .form-submit:hover { background: #c40018; }
+    .form-note { text-align: center; font-size: 0.78rem; color: var(--text-muted); margin-top: 0.75rem; }
+
+    /* FAQ */
+    .faq-list { max-width: 760px; margin: 2rem auto 0; }
+    .faq-item { border-bottom: 1px solid var(--grey-mid); }
+    .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 1.4rem 0; display: flex; justify-content: space-between; align-items: center; gap: 1rem; cursor: pointer; font-family: var(--font-head); font-size: 1.1rem; font-weight: 600; color: var(--charcoal); }
+    .faq-icon { width: 26px; height: 26px; border: 1px solid var(--grey-mid); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s; }
+    .faq-icon svg { width: 11px; height: 11px; transition: transform 0.3s; }
+    .faq-item.open .faq-icon { background: var(--red); border-color: var(--red); }
+    .faq-item.open .faq-icon svg { transform: rotate(45deg); color: var(--white); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .faq-item.open .faq-a { max-height: 300px; }
+    .faq-a-inner { padding-bottom: 1.4rem; font-size: 0.92rem; line-height: 1.8; color: var(--text-muted); }
+
+    #footer { background: var(--charcoal); color: var(--white); padding: 4rem 2rem 0; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-logo { font-family: var(--font-head); font-size: 1.35rem; font-weight: 700; text-transform: uppercase; color: var(--white); margin-bottom: 0.75rem; }
+    .footer-logo span { color: var(--red); }
+    .footer-tagline { font-size: 0.85rem; color: rgba(255,255,255,0.5); font-style: italic; margin-bottom: 1.25rem; }
+    .footer-contact { display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; text-decoration: none; }
+    .footer-contact svg { width: 14px; height: 14px; color: var(--red); }
+    .footer-col-title { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1.25rem; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-links a { font-size: 0.88rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-bottom-bar { height: 3px; background: var(--red); }
+    .footer-bottom { display: flex; justify-content: space-between; padding: 1.5rem 0; flex-wrap: wrap; gap: 1rem; }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+    .footer-copy a { color: rgba(255,255,255,0.5); text-decoration: none; }
+
+    @media (max-width: 1024px) { .contact-grid { grid-template-columns: 1fr; gap: 3rem; } }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+      .form-row { grid-template-columns: 1fr; }
+      .contact-form-wrap { padding: 2rem; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .page-hero::after { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Endeavor <span>Evolution</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li><a href="funding.html">Funding</a></li><li><a href="credit.html">Credit</a></li>
+        <li><a href="consulting.html">Consulting</a></li><li><a href="webdesign.html">Web Design</a></li>
+        <li><a href="contact.html" class="nav-active">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Apply Now</a>
+      <button class="nav-hamburger" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="funding.html">Funding</a>
+    <a href="credit.html">Credit Repair</a><a href="consulting.html">Consulting</a>
+    <a href="webdesign.html">Web Design</a><a href="contact.html">Contact</a>
+    <a href="contact.html" style="color:var(--red);font-weight:600;">Apply Now →</a>
+  </div>
+
+  <header class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-breadcrumb"><a href="index.html">Home</a> &rsaquo; Contact</div>
+      <h1>Let's Build Your<br/><span>Path Forward.</span></h1>
+      <p class="page-hero-sub">Book a free consultation. Tell us your goals. We'll respond within 24 hours with a clear plan for exactly how we can help you move forward.</p>
+    </div>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section style="background:var(--grey);">
+    <div class="section-inner">
+      <div class="contact-grid">
+
+        <!-- LEFT: INFO -->
+        <div class="reveal">
+          <div class="contact-eyebrow">Get In Touch</div>
+          <h2 class="contact-headline">We'd Love To Hear From You</h2>
+          <p class="contact-body">Whether you're ready to apply for funding, start credit repair, or just have questions — we're here. Every conversation starts with a free consultation and zero pressure.</p>
+
+          <a href="tel:+13050000000" class="contact-info-item" style="text-decoration:none;display:flex;">
+            <div class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><div class="contact-info-label">Phone</div><span class="contact-info-value">(305) 000-0000</span></div>
+          </a>
+
+          <a href="mailto:info@endeavorevolution.com" class="contact-info-item" style="text-decoration:none;display:flex;">
+            <div class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><div class="contact-info-label">Email</div><span class="contact-info-value">info@endeavorevolution.com</span></div>
+          </a>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="contact-info-label">Location</div><span class="contact-info-value">Miami Gardens, FL<br/><span style="color:var(--text-muted);font-size:0.82rem;">Serving all of South Florida</span></span></div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><div class="contact-info-label">Response Time</div><span class="contact-info-value">Within 24 hours<br/><span style="color:var(--text-muted);font-size:0.82rem;">Mon–Sat, 9am–7pm EST</span></span></div>
+          </div>
+
+          <div class="trust-row">
+            <div class="trust-pill"><span class="trust-dot"></span>SBA Approved</div>
+            <div class="trust-pill"><span class="trust-dot"></span>BBB Accredited</div>
+            <div class="trust-pill"><span class="trust-dot"></span>5-Star Rated</div>
+            <div class="trust-pill"><span class="trust-dot"></span>Licensed & Bonded</div>
+          </div>
+        </div>
+
+        <!-- RIGHT: FORM -->
+        <div class="contact-form-wrap reveal">
+          <div class="form-title">Start Your Free Consultation</div>
+          <p class="form-sub">Fill out the form and we'll reach out within 24 hours to schedule your free strategy session.</p>
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+            <div class="form-row">
+              <div>
+                <label class="form-label">First Name</label>
+                <input type="text" name="firstName" class="form-input" placeholder="John" required />
+              </div>
+              <div>
+                <label class="form-label">Last Name</label>
+                <input type="text" name="lastName" class="form-input" placeholder="Doe" required />
+              </div>
+            </div>
+            <div class="form-field">
+              <label class="form-label">Email Address</label>
+              <input type="email" name="email" class="form-input" placeholder="john@company.com" required />
+            </div>
+            <div class="form-field">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" name="phone" class="form-input" placeholder="(305) 000-0000" />
+            </div>
+            <div class="form-field">
+              <label class="form-label">Business Name (if applicable)</label>
+              <input type="text" name="business" class="form-input" placeholder="Your Business LLC" />
+            </div>
+            <div class="form-field">
+              <label class="form-label">I'm Interested In</label>
+              <select name="service" class="form-input form-select">
+                <option value="">Select a service...</option>
+                <option value="funding">Business Funding</option>
+                <option value="credit">Credit Repair</option>
+                <option value="consulting">Business Consulting</option>
+                <option value="web">Web Design</option>
+                <option value="funding+credit">Funding + Credit Repair (Both)</option>
+                <option value="all">All Services</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label class="form-label">Tell Us About Your Goals</label>
+              <textarea name="message" class="form-input form-textarea" placeholder="What are you looking to achieve? How can we help you move forward?"></textarea>
+            </div>
+            <button type="submit" class="form-submit" id="submitBtn">Send My Free Consultation Request</button>
+            <p class="form-note">No obligation. No pressure. We respond within 24 hours.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:var(--white);">
+    <div class="section-inner">
+      <div style="text-align:center;margin-bottom:1rem;">
+        <div style="font-size:0.78rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);margin-bottom:1rem;" class="reveal">Questions</div>
+        <h2 style="font-family:var(--font-head);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;color:var(--charcoal);" class="reveal">Quick Answers Before You Reach Out</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">Is the consultation really free?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-a"><p class="faq-a-inner">Yes, completely. Our initial consultation is 100% free with no obligation. We use it to understand your situation and tell you honestly what we can do for you — and what we can't. You decide from there.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">How quickly will you respond?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-a"><p class="faq-a-inner">Within 24 hours on business days. For urgent funding situations, call us directly at (305) 000-0000 and we'll prioritize your case.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do you work with people outside Miami Gardens?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-a"><p class="faq-a-inner">Yes. We serve all of South Florida including Miami, Fort Lauderdale, Miramar, Pembroke Pines, Hialeah, and surrounding areas. Consultations can be done in person or virtually — whatever works best for you.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What should I bring to my consultation?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+          <div class="faq-a"><p class="faq-a-inner">Nothing required for the initial call — just yourself and your goals. If you have them available, it helps to have a general sense of your monthly revenue, time in business, and credit score range. But don't let not having these stop you from reaching out.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">Endeavor <span>Evolution</span></div>
+          <div class="footer-tagline">"Built On Connection. Driven By Purpose." — Miami Gardens, FL</div>
+          <a href="tel:+13050000000" class="footer-contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(305) 000-0000</a>
+          <a href="mailto:info@endeavorevolution.com" class="footer-contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@endeavorevolution.com</a>
+        </div>
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+            <li><a href="funding.html">Business Funding</a></li><li><a href="credit.html">Credit Repair</a></li>
+            <li><a href="consulting.html">Consulting</a></li><li><a href="webdesign.html">Web Design</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Service Area</div>
+          <ul class="footer-links">
+            <li><a href="#">Miami Gardens, FL</a></li><li><a href="#">Miami, FL</a></li>
+            <li><a href="#">Fort Lauderdale, FL</a></li><li><a href="#">Miramar, FL</a></li>
+            <li><a href="#">All of South Florida</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar"></div>
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; 2024 Endeavor Evolution Enterprises LLC. All rights reserved.</div>
+        <div class="footer-copy">Web Design by <a href="webdesign.html">Visionary Web Studio</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    const lenis = new Lenis({ duration: 1.2, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(time => lenis.raf(time * 1000));
+    gsap.ticker.lagSmoothing(0);
+    window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40));
+    document.getElementById('navToggle').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('open'));
+    document.querySelectorAll('.reveal').forEach(el => {
+      const inView = el.getBoundingClientRect().top < window.innerHeight * 0.95;
+      if (inView) gsap.fromTo(el, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', delay: 0.1 });
+      else gsap.fromTo(el, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
+    });
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item'), isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    /* Form submit */
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.textContent = 'Sending...'; btn.style.opacity = '0.7'; btn.disabled = true;
+      try {
+        const res = await fetch(this.action, { method: 'POST', body: new FormData(this), headers: { Accept: 'application/json' } });
+        if (res.ok) {
+          btn.textContent = "Sent! We'll reach out within 24 hours.";
+          btn.style.background = '#16a34a'; btn.style.opacity = '1';
+          this.reset();
+        } else throw new Error();
+      } catch {
+        btn.textContent = 'Something went wrong — please call or email us directly.';
+        btn.style.background = '#374151'; btn.style.opacity = '1'; btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

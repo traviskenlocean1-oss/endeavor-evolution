@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Design Miami Gardens | Visionary Web Studio — Endeavor Evolution</title>
+  <meta name="description" content="Custom web design for South Florida businesses. Visionary Web Studio builds high-converting websites for entrepreneurs in Miami Gardens, FL — powered by Endeavor Evolution Enterprises." />
+  <link rel="canonical" href="https://endeavorevolution.com/webdesign.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --red: #E8001D; --charcoal: #1A1A1A; --white: #FFFFFF; --grey: #F8F9FA; --grey-mid: #E5E7EB; --text-muted: #6B7280; --font-head: 'Cormorant Garamond', serif; --font-body: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--charcoal); background: var(--white); overflow-x: hidden; }
+    #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--white); transition: box-shadow 0.3s; border-bottom: 1px solid transparent; }
+    #nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.08); border-bottom-color: var(--grey-mid); }
+    .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 2rem; height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .nav-logo { font-family: var(--font-head); font-size: 1.25rem; font-weight: 700; letter-spacing: 0.08em; color: var(--charcoal); text-decoration: none; text-transform: uppercase; }
+    .nav-logo span { color: var(--red); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; color: var(--charcoal); transition: color 0.2s; }
+    .nav-links a:hover, .nav-active { color: var(--red) !important; }
+    .nav-cta { background: var(--red); color: var(--white); padding: 0.65rem 1.6rem; border-radius: 4px; font-size: 0.82rem; font-weight: 600; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+    .nav-cta:hover { background: #c40018; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--charcoal); }
+    .mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; background: var(--white); border-top: 1px solid var(--grey-mid); padding: 1.5rem 2rem; box-shadow: 0 8px 32px rgba(0,0,0,0.1); z-index: 999; flex-direction: column; gap: 1.25rem; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-size: 0.9rem; color: var(--charcoal); text-decoration: none; padding: 0.4rem 0; border-bottom: 1px solid var(--grey-mid); }
+
+    .page-hero { background: var(--white); padding: 9rem 2rem 5rem; border-bottom: 1px solid var(--grey-mid); position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--red); }
+    .page-hero::after { content: ''; position: absolute; top: 72px; right: 0; width: 45%; height: 100%; background: var(--grey); clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%); z-index: 0; }
+    .page-hero-inner { max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; }
+    .page-hero-breadcrumb { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
+    .page-hero-breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .page-hero h1 { font-family: var(--font-head); font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; line-height: 1.1; color: var(--charcoal); max-width: 700px; }
+    .page-hero h1 span { color: var(--red); }
+    .page-hero-sub { font-size: 1.05rem; line-height: 1.75; color: var(--text-muted); max-width: 560px; margin-top: 1.25rem; }
+    .page-hero-badge { display: inline-block; background: rgba(232,0,29,0.08); color: var(--red); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 100px; border: 1px solid rgba(232,0,29,0.2); margin-bottom: 1rem; }
+    .page-hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+    .btn-primary { background: var(--red); color: var(--white); padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.88rem; font-weight: 600; text-transform: uppercase; text-decoration: none; border: 2px solid var(--red); display: inline-block; transition: background 0.2s; }
+    .btn-outline { background: transparent; color: var(--charcoal); padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.88rem; font-weight: 600; text-transform: uppercase; text-decoration: none; border: 2px solid var(--charcoal); display: inline-block; transition: border-color 0.2s, color 0.2s; }
+    .btn-outline:hover { border-color: var(--red); color: var(--red); }
+
+    .section-inner { max-width: 1280px; margin: 0 auto; padding: 6rem 2rem; }
+    .section-eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
+    .section-headline { font-family: var(--font-head); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; line-height: 1.15; color: var(--charcoal); margin-bottom: 1rem; }
+    .section-sub { font-size: 1rem; line-height: 1.75; color: var(--text-muted); max-width: 580px; }
+    .reveal { opacity: 0; transform: translateY(28px); }
+
+    /* PACKAGES */
+    .pkg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .pkg-card { background: var(--white); border: 1px solid var(--grey-mid); border-radius: 12px; padding: 2.25rem; position: relative; transition: box-shadow 0.3s, transform 0.3s; }
+    .pkg-card.featured { border-color: var(--red); box-shadow: 0 8px 32px rgba(232,0,29,0.1); }
+    .pkg-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--red); color: var(--white); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 1rem; border-radius: 100px; white-space: nowrap; }
+    .pkg-card:hover { box-shadow: 0 12px 40px rgba(232,0,29,0.08); transform: translateY(-3px); }
+    .pkg-name { font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.4rem; }
+    .pkg-price { font-family: var(--font-head); font-size: 2.5rem; font-weight: 700; color: var(--red); line-height: 1; margin: 1rem 0 0.25rem; }
+    .pkg-price span { font-family: var(--font-body); font-size: 0.8rem; font-weight: 500; color: var(--text-muted); display: inline; }
+    .pkg-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1.5rem; }
+    .pkg-divider { height: 1px; background: var(--grey-mid); margin: 1.25rem 0; }
+    .pkg-features { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .pkg-features li { font-size: 0.85rem; color: #374151; display: flex; align-items: center; gap: 0.6rem; }
+    .pkg-features li svg { width: 14px; height: 14px; color: var(--red); flex-shrink: 0; }
+    .pkg-cta { display: block; text-align: center; margin-top: 2rem; padding: 0.85rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; transition: all 0.2s; }
+    .pkg-cta-outline { border: 2px solid var(--grey-mid); color: var(--charcoal); }
+    .pkg-cta-outline:hover { border-color: var(--red); color: var(--red); }
+    .pkg-cta-filled { background: var(--red); color: var(--white); border: 2px solid var(--red); }
+    .pkg-cta-filled:hover { background: #c40018; }
+
+    /* WHAT WE BUILD */
+    .build-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .build-item { padding: 2rem; background: var(--grey); border-radius: 10px; display: flex; gap: 1.25rem; align-items: flex-start; }
+    .build-num { font-family: var(--font-head); font-size: 2.5rem; font-weight: 700; color: rgba(232,0,29,0.15); line-height: 1; flex-shrink: 0; width: 48px; }
+    .build-title { font-family: var(--font-head); font-size: 1.25rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.4rem; }
+    .build-desc { font-size: 0.87rem; line-height: 1.65; color: var(--text-muted); }
+
+    /* PROCESS */
+    .process-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; position: relative; margin-top: 3rem; }
+    .process-row::before { content: ''; position: absolute; top: 24px; left: calc(12.5% + 1.5rem); right: calc(12.5% + 1.5rem); height: 2px; background: linear-gradient(90deg, var(--red), rgba(232,0,29,0.15)); }
+    .ps-item { text-align: center; }
+    .ps-num { width: 48px; height: 48px; background: var(--red); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-head); font-size: 1.2rem; font-weight: 700; margin: 0 auto 1.25rem; position: relative; z-index: 1; box-shadow: 0 4px 14px rgba(232,0,29,0.3); }
+    .ps-title { font-family: var(--font-head); font-size: 1.1rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.4rem; }
+    .ps-desc { font-size: 0.82rem; line-height: 1.65; color: var(--text-muted); }
+
+    .cta-band { background: var(--red); padding: 5rem 2rem; text-align: center; }
+    .cta-band h2 { font-family: var(--font-head); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; color: var(--white); margin-bottom: 1rem; }
+    .cta-band p { font-size: 1rem; color: rgba(255,255,255,0.85); max-width: 520px; margin: 0 auto 2.25rem; line-height: 1.75; }
+    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-white { background: var(--white); color: var(--red); padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.88rem; font-weight: 600; text-transform: uppercase; text-decoration: none; border: 2px solid var(--white); display: inline-block; }
+    .btn-outline-white { background: transparent; color: var(--white); padding: 0.85rem 2rem; border-radius: 4px; font-size: 0.88rem; font-weight: 600; text-transform: uppercase; text-decoration: none; border: 2px solid rgba(255,255,255,0.7); display: inline-block; }
+
+    #footer { background: var(--charcoal); color: var(--white); padding: 4rem 2rem 0; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-logo { font-family: var(--font-head); font-size: 1.35rem; font-weight: 700; text-transform: uppercase; color: var(--white); margin-bottom: 0.75rem; }
+    .footer-logo span { color: var(--red); }
+    .footer-tagline { font-size: 0.85rem; color: rgba(255,255,255,0.5); font-style: italic; margin-bottom: 1.25rem; }
+    .footer-contact { display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; text-decoration: none; }
+    .footer-contact svg { width: 14px; height: 14px; color: var(--red); }
+    .footer-col-title { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1.25rem; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-links a { font-size: 0.88rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-bottom-bar { height: 3px; background: var(--red); }
+    .footer-bottom { display: flex; justify-content: space-between; padding: 1.5rem 0; flex-wrap: wrap; gap: 1rem; }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+    .footer-copy a { color: rgba(255,255,255,0.5); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+      .pkg-grid, .build-grid { grid-template-columns: 1fr; }
+      .process-row { grid-template-columns: repeat(2, 1fr); }
+      .process-row::before { display: none; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .page-hero::after { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Endeavor <span>Evolution</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li><a href="funding.html">Funding</a></li><li><a href="credit.html">Credit</a></li>
+        <li><a href="consulting.html">Consulting</a></li>
+        <li><a href="webdesign.html" class="nav-active">Web Design</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Apply Now</a>
+      <button class="nav-hamburger" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="funding.html">Funding</a>
+    <a href="credit.html">Credit Repair</a><a href="consulting.html">Consulting</a>
+    <a href="webdesign.html">Web Design</a><a href="contact.html">Contact</a>
+    <a href="contact.html" style="color:var(--red);font-weight:600;">Apply Now →</a>
+  </div>
+
+  <header class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-badge">Powered by Visionary Web Studio</div>
+      <div class="page-hero-breadcrumb"><a href="index.html">Home</a> &rsaquo; Web Design</div>
+      <h1>Websites That<br/><span>Actually Convert.</span></h1>
+      <p class="page-hero-sub">Custom-built websites for South Florida entrepreneurs and small business owners. Designed to rank in search, represent your brand, and turn visitors into paying customers.</p>
+      <div class="page-hero-ctas">
+        <a href="contact.html" class="btn-primary">Get A Free Quote</a>
+        <a href="contact.html" class="btn-outline">See What We Build</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PACKAGES -->
+  <section style="background:var(--white);">
+    <div class="section-inner">
+      <div style="text-align:center;margin-bottom:0.5rem;">
+        <div class="section-eyebrow reveal">Pricing</div>
+        <h2 class="section-headline reveal">Simple, Transparent Packages</h2>
+        <p class="section-sub reveal" style="margin:0 auto;">Every package includes a fully custom design, mobile optimization, SEO foundation, and conversion architecture. No templates. No page builders.</p>
+      </div>
+      <div class="pkg-grid">
+        <div class="pkg-card reveal">
+          <div class="pkg-name">Starter</div>
+          <p class="pkg-desc">Single-page landing site perfect for service-based businesses or solopreneurs who need a strong online presence fast.</p>
+          <div class="pkg-price">$800 <span>one-time</span></div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Custom single-page design</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Mobile responsive</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Contact form integration</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Basic SEO setup</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Google Analytics</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>7-day delivery</li>
+          </ul>
+          <a href="contact.html" class="pkg-cta pkg-cta-outline">Get Started</a>
+        </div>
+        <div class="pkg-card featured reveal">
+          <div class="pkg-badge">Most Popular</div>
+          <div class="pkg-name">Growth</div>
+          <p class="pkg-desc">Full multi-page website with complete SEO, animations, and conversion architecture — ideal for businesses ready to compete online.</p>
+          <div class="pkg-price">$1,800 <span>one-time</span></div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>5–7 custom pages</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>GSAP animations & Lenis</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Full local SEO setup</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Schema markup (JSON-LD)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Contact form + CRM hook</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Vercel deployment</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>30-day post-launch support</li>
+          </ul>
+          <a href="contact.html" class="pkg-cta pkg-cta-filled">Get Started</a>
+        </div>
+        <div class="pkg-card reveal">
+          <div class="pkg-name">Premium</div>
+          <p class="pkg-desc">Enterprise-level web presence with custom 3D elements, advanced animations, e-commerce integration, and ongoing maintenance.</p>
+          <div class="pkg-price">Custom <span>pricing</span></div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Unlimited pages</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Three.js / Vanta 3D scenes</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>E-commerce integration</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Booking / scheduling system</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Full SEO + content strategy</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Ongoing maintenance plan</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Priority support</li>
+          </ul>
+          <a href="contact.html" class="pkg-cta pkg-cta-outline">Get A Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE BUILD -->
+  <section style="background:var(--grey);">
+    <div class="section-inner">
+      <div class="section-eyebrow reveal">What We Build</div>
+      <h2 class="section-headline reveal">Every Type of Site Your Business Needs</h2>
+      <div class="build-grid" style="margin-top:2.5rem;">
+        <div class="build-item reveal">
+          <div class="build-num">01</div>
+          <div><div class="build-title">Business Landing Pages</div><p class="build-desc">High-converting single-page sites optimized for local search and designed to generate leads from day one. Fast, focused, and built to rank.</p></div>
+        </div>
+        <div class="build-item reveal">
+          <div class="build-num">02</div>
+          <div><div class="build-title">Multi-Page Business Websites</div><p class="build-desc">Full website presence with dedicated service pages, about pages, blog, and contact — everything your business needs to look professional and get found.</p></div>
+        </div>
+        <div class="build-item reveal">
+          <div class="build-num">03</div>
+          <div><div class="build-title">E-Commerce Stores</div><p class="build-desc">Shopify or custom-built online stores with product pages, cart, checkout, and inventory management. We build stores that sell.</p></div>
+        </div>
+        <div class="build-item reveal">
+          <div class="build-num">04</div>
+          <div><div class="build-title">Booking & Service Sites</div><p class="build-desc">Sites with integrated scheduling systems for service businesses — salons, consultants, coaches, medical practices, and more. Reduce no-shows, increase bookings.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section style="background:var(--white);">
+    <div class="section-inner">
+      <div style="text-align:center;margin-bottom:0.5rem;">
+        <div class="section-eyebrow reveal">Process</div>
+        <h2 class="section-headline reveal">From Brief to Live in Weeks</h2>
+      </div>
+      <div class="process-row">
+        <div class="ps-item reveal">
+          <div class="ps-num">1</div>
+          <div class="ps-title">Discovery Call</div>
+          <p class="ps-desc">We learn your brand, goals, and target audience. We gather everything needed to design something uniquely yours.</p>
+        </div>
+        <div class="ps-item reveal">
+          <div class="ps-num">2</div>
+          <div class="ps-title">Design & Build</div>
+          <p class="ps-desc">We design and build your site from scratch — no templates. Every element is custom to your brand and optimized to convert.</p>
+        </div>
+        <div class="ps-item reveal">
+          <div class="ps-num">3</div>
+          <div class="ps-title">Review & Revise</div>
+          <p class="ps-desc">You review the live preview and we make revisions until it's exactly right. No rush — we get it perfect before going live.</p>
+        </div>
+        <div class="ps-item reveal">
+          <div class="ps-num">4</div>
+          <div class="ps-title">Launch & Support</div>
+          <p class="ps-desc">We deploy to Vercel (or your host of choice), set up your domain, and provide 30-day post-launch support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <h2>Ready For A Website That Works?</h2>
+    <p>Get a free quote for your project. We'll tell you exactly what we'd build, why, and what it would cost — no obligation.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn-white">Get Free Quote</a>
+      <a href="contact.html" class="btn-outline-white">Book A Discovery Call</a>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">Endeavor <span>Evolution</span></div>
+          <div class="footer-tagline">"Built On Connection. Driven By Purpose." — Miami Gardens, FL</div>
+          <a href="tel:+13050000000" class="footer-contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(305) 000-0000</a>
+          <a href="mailto:info@endeavorevolution.com" class="footer-contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@endeavorevolution.com</a>
+        </div>
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+            <li><a href="funding.html">Business Funding</a></li><li><a href="credit.html">Credit Repair</a></li>
+            <li><a href="consulting.html">Consulting</a></li><li><a href="webdesign.html">Web Design</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Service Area</div>
+          <ul class="footer-links">
+            <li><a href="#">Miami Gardens, FL</a></li><li><a href="#">Miami, FL</a></li>
+            <li><a href="#">Fort Lauderdale, FL</a></li><li><a href="#">All of South Florida</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar"></div>
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; 2024 Endeavor Evolution Enterprises LLC. All rights reserved.</div>
+        <div class="footer-copy">Web Design by <a href="webdesign.html">Visionary Web Studio</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    const lenis = new Lenis({ duration: 1.2, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(time => lenis.raf(time * 1000));
+    gsap.ticker.lagSmoothing(0);
+    window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40));
+    document.getElementById('navToggle').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('open'));
+    document.querySelectorAll('.reveal').forEach(el => {
+      const inView = el.getBoundingClientRect().top < window.innerHeight * 0.95;
+      if (inView) gsap.fromTo(el, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', delay: 0.1 });
+      else gsap.fromTo(el, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
+    });
+  </script>
+</body>
+</html>
