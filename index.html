@@ -124,7 +124,7 @@
       --font-body: 'Inter', sans-serif;
     }
 
-    html { scroll-behavior: auto; }
+    html { scroll-behavior: auto !important; }
 
     body {
       font-family: var(--font-body);
@@ -1083,7 +1083,7 @@
   <!-- ═══ NAV ══════════════════════════════════════ -->
   <nav id="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">Endeavor <span>Evolution</span></a>
+      <a href="#hero" class="nav-logo"><img src="logo.svg" alt="Endeavor Evolution Enterprises" height="45" style="display:block;"></a>
       <ul class="nav-links">
         <li><a href="index.html" class="nav-active">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -1590,7 +1590,8 @@
       easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
       smoothWheel: true,
-      wheelMultiplier: 1.2
+      smoothTouch: false,
+      wheelMultiplier: 1.0
     });
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add(time => lenis.raf(time * 1000));
@@ -1616,6 +1617,7 @@
     } else {
       gsap.registerPlugin(ScrollTrigger);
     }
+    ScrollTrigger.normalizeScroll(false);
 
     /* ── HERO ANIMATIONS ───────────────────────────── */
     /* Always run — don't gate on SplitText */

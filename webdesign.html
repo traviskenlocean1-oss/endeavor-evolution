@@ -12,7 +12,7 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --red: #E8001D; --charcoal: #1A1A1A; --white: #FFFFFF; --grey: #F8F9FA; --grey-mid: #E5E7EB; --text-muted: #6B7280; --font-head: 'Cormorant Garamond', serif; --font-body: 'Inter', sans-serif; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: auto !important; }
     body { font-family: var(--font-body); color: var(--charcoal); background: var(--white); overflow-x: hidden; }
     #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--white); transition: box-shadow 0.3s; border-bottom: 1px solid transparent; }
     #nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.08); border-bottom-color: var(--grey-mid); }
@@ -125,7 +125,7 @@
 
   <nav id="nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">Endeavor <span>Evolution</span></a>
+      <a href="index.html" class="nav-logo"><img src="logo.svg" alt="Endeavor Evolution Enterprises" height="45" style="display:block;"></a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
         <li><a href="funding.html">Funding</a></li><li><a href="credit.html">Credit</a></li>
@@ -320,16 +320,9 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <script>
     gsap.registerPlugin(ScrollTrigger);
-    document.documentElement.style.overflow = 'auto';
-    document.body.style.overflow = 'auto';
     ScrollTrigger.normalizeScroll(false);
-    const lenis = new Lenis({ duration: 0.6, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true, wheelMultiplier: 1.5 });
-    lenis.on('scroll', ScrollTrigger.update);
-    gsap.ticker.add(time => lenis.raf(time * 1000));
-    gsap.ticker.lagSmoothing(0);
     window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40));
     document.getElementById('navToggle').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('open'));
     document.querySelectorAll('.reveal').forEach(el => {

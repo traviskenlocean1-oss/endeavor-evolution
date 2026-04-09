@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 96" role="img" aria-label="Endeavor Evolution Enterprises">
+  <!-- Left E — red #E8001D -->
+  <rect x="42" y="3" width="10" height="70" fill="#E8001D"/>
+  <rect x="42" y="3" width="38" height="10" fill="#E8001D"/>
+  <rect x="42" y="34" width="30" height="10" fill="#E8001D"/>
+  <rect x="42" y="63" width="38" height="10" fill="#E8001D"/>
+  <!-- Right E mirrored (Ǝ) — charcoal #1A1A1A -->
+  <rect x="108" y="3" width="10" height="70" fill="#1A1A1A"/>
+  <rect x="80" y="3" width="38" height="10" fill="#1A1A1A"/>
+  <rect x="88" y="34" width="30" height="10" fill="#1A1A1A"/>
+  <rect x="80" y="63" width="38" height="10" fill="#1A1A1A"/>
+  <!-- ENDEAVOR EVOLUTION tagline -->
+  <text x="80" y="87" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="7.2" letter-spacing="2.4" fill="#1A1A1A">ENDEAVOR EVOLUTION</text>
+  <!-- Red accent line -->
+  <line x1="18" y1="92" x2="142" y2="92" stroke="#E8001D" stroke-width="1.5" stroke-linecap="square"/>
+</svg>
